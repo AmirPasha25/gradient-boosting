@@ -138,7 +138,7 @@ Final Prediction = M₁ + η×M₂ + η×M₃ + … + η×Mₖ
 
 ---
 
-## One-Line Intuition (Lock This 🔒)
+## One-Line Intuition (Lock This)
 
 - **M₁:** Makes an average guess  
 - **M₂:** Fixes M₁’s mistakes  
