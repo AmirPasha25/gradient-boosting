@@ -69,3 +69,8 @@ For regression:
 - **M₁ prediction = mean(y)**
 
 Example:
+y = [10, 14, 16]
+M₁ = (10 + 14 + 16) / 3 = 13.33
+
+Predictions from M₁: Pred₁ = [13.33, 13.33, 13.33]
+
