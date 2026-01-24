@@ -74,3 +74,73 @@ M₁ = (10 + 14 + 16) / 3 = 13.33
 
 Predictions from M₁: Pred₁ = [13.33, 13.33, 13.33]
 
+---
+
+## Step 2: Compute Pseudo-Residuals for Model 2
+
+Residuals represent what the first model failed to learn.
+PseudoResidual₂ = y − Pred₁
+[10 − 13.33, 14 − 13.33, 16 − 13.33] = [−3.33, 0.67, 2.67]
+
+---
+
+## Step 3: Train Model 2 (M₂)
+
+- **Model type:** Decision Tree (weak learner)
+- **Input (X):** Original features
+- **Target (y):** PseudoResidual₂
+
+Assume predictions:
+M₂ predictions = [−3, 1, 2]
+
+---
+
+## Step 4: Update Predictions (Learning Rate η = 0.1)
+Pred₂ = Pred₁ + η × M₂
+
+Pred₂ = 13.33 + 0.1 × [−3, 1, 2] = [13.03, 13.43, 13.53]
+
+---
+
+## Step 5: Compute Pseudo-Residuals for Model 3
+PseudoResidual₃ = y − Pred₂
+
+[10 − 13.03, 14 − 13.43, 16 − 13.53] = [−3.03, 0.57, 2.47]
+
+---
+
+## Step 6: Train Model 3 (M₃)
+
+- **Input:** Original features
+- **Target:** PseudoResidual₃
+
+Assume predictions:
+
+M₃ predictions = [−3, 1, 2]
+
+---
+
+## Step 7: Update Predictions Again
+Pred₃ = Pred₂ + η × M₃
+Pred₃ = [13.03, 13.43, 13.53] + 0.1 × [−3, 1, 2] = [12.73, 13.53, 13.73]
+
+---
+
+## Step 8: Generalization for K Models
+
+At iteration **k**:
+PseudoResidualₖ = y − Pred₍k−1₎
+
+---
+
+## Final Gradient Boosting Model
+Final Prediction = M₁ + η×M₂ + η×M₃ + … + η×Mₖ
+
+---
+
+## One-Line Intuition (Lock This 🔒)
+
+- **M₁:** Makes an average guess  
+- **M₂:** Fixes M₁’s mistakes  
+- **M₃:** Fixes remaining mistakes  
+- Each new model learns the **residual errors** of the previous model
