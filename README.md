@@ -1,4 +1,4 @@
-# 🌳 Gradient Boosting – Intuition and Working (Regression)
+# 🌳 Gradient Boosting – Intuition (Regression)
 
 
 ![Gradient Boosting Visualization](assets/gradient_boosting.png)
