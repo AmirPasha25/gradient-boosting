@@ -1,5 +1,7 @@
 # 🌳 Gradient Boosting – Intuition and Working (Regression)
 
+
+![Gradient Boosting Visualization](assets/gradient_boosting.png)
 ## What is Gradient Boosting?
 
 **Gradient Boosting** is an **ensemble learning technique** where models are added **sequentially** to form a strong predictor.  
